@@ -2,3 +2,11 @@ Enemy Room
 You walk in the room and you see a giant Cyclops ready to beat you up.
 Rooms/EndRoom.txt
 Ending
+Think fast, how will you defeat the Cyclops?! Type ANSWER then letter. 
+A) Dash in between his legs.
+B) Swing your fists at him.
+C) Bore him with your work complaints.
+D) Grab the nearest rock and aim for his eye!
+A
+Unamused by your antics the Cyclops is not phased by your foolish ways. 
+You dash in between his legs, he looks down and you punch him in the eye. He has fallen. Type NEXT ROOM to proceed.

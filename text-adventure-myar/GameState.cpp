@@ -4,6 +4,7 @@
 #include "EnemyRoom.h"
 #include "BranchRoom.h"
 #include "EndRoom.h"
+#include "InvalidCommand.h"
 #include <iostream>
 
 using namespace std;
@@ -32,9 +33,9 @@ void GameState::StartGame()
 				getline(cin, command);
 				_currentRoom->ProcessCommand(command); //getting command from user, during this process if u get an invalid command it gives an exception and then repeats
 			}
-			catch (exception& e)
+			catch (InvalidCommand& e)
 			{
-				cout << "Exception happened\n";
+				cout << e.what() << "\n";
 			}
 		}
 

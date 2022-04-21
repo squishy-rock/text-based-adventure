@@ -66,8 +66,8 @@ void RiddleRoom::ProcessCommand(string command)
 	if (wordsInCommand.size() > 2)
 	{
 		// throw exception here
-		// throw InvalidCommand("Your command has two many words");
-		cout << "COMMAND TOO BIG" << "\n";
+		// throw InvalidCommand("Your command has too many words");
+		throw InvalidCommand("COMMAND HAS TOO MANY WORDS.");
 	}
 	else if (wordsInCommand[0] == "ANSWER")
 	{
@@ -88,6 +88,6 @@ void RiddleRoom::ProcessCommand(string command)
 	else
 	{
 		// throw exception here
-		cout << "ERROR PROCESSING COMMAND" << "\n";
+		throw InvalidCommand("INVALID COMMAND PLEASE TYPE 'NEXT ROOM'.");
 	}
 }

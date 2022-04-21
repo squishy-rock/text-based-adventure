@@ -9,11 +9,12 @@ void IntroRoom::ProcessCommand(string command)
 	if (wordsInCommand.size() > 2) // to check for the specific case of using more than 2 words so we know its incorrect
 	{
 		// throw exception here
-		cout << "COMMAND TOO BIG" << "\n";
+		throw InvalidCommand("COMMAND IS TOO LARGE, TYPE 'NEXT ROOM'");
 	}
-	else if (wordsInCommand[0] != "NEXT")
+	else if (wordsInCommand[0] != "NEXT") 
 	{
 		// throw exception "Only next command accepted" (if the first word isnt next we know its wrong) 
+		throw InvalidCommand("INVALID COMMAND: "+wordsInCommand[0]+", THIS ROOM ONLY ACCEPTS 'NEXT ROOM'"); //combine strings, now our system takes whatever command they typed in to tell the user what they did wrong
 	}
 	else if (command == "NEXT ROOM")
 	{
@@ -22,6 +23,6 @@ void IntroRoom::ProcessCommand(string command)
 	else
 	{
 		// throw exception here
-		cout << "ERROR PROCESSING COMMAND" << "\n";
+		throw InvalidCommand("ERROR PROCESSING COMMAND.");
 	}
 }

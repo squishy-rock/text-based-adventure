@@ -54,8 +54,8 @@ void BranchRoom::ProcessCommand(string command)
 	if (wordsInCommand.size() > 2)
 	{
 		// throw exception here
-		// throw InvalidCommand("Your command has two many words");
-		cout << "COMMAND TOO BIG" << "\n";
+		// throw InvalidCommand("Your command has too many words");
+		throw InvalidCommand("ERROR YOUR COMMAND HAS TOO MANY WORDS.");
 	}
 	else if (wordsInCommand[0] == "ANSWER")
 	{
@@ -67,10 +67,10 @@ void BranchRoom::ProcessCommand(string command)
 		{
 			char choice = wordsInCommand[1][0];
 			int choiceIndex = choice - 'A';
-			cout << "CHOICE MADE: " << choiceIndex << "\n";
-			if (choiceIndex >= _branches.size())
+			if (choiceIndex >= _branches.size() || choiceIndex < 0)
 			{
 				// throw not valid choice error
+				throw InvalidCommand("INVALID COMMAND PLEASE TYPE ANSWER THEN YOUR CHOICE.");
 			}
 			else
 			{
@@ -83,6 +83,6 @@ void BranchRoom::ProcessCommand(string command)
 	else
 	{
 		// throw exception here
-		cout << "ERROR PROCESSING COMMAND" << "\n";
+		throw InvalidCommand("ERROR PROCESSING COMMAND.");
 	}
 }

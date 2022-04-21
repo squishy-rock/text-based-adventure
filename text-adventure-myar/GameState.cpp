@@ -1,7 +1,6 @@
 #include "GameState.h"
 #include "IntroRoom.h"
 #include "RiddleRoom.h"
-#include "EnemyRoom.h"
 #include "BranchRoom.h"
 #include "EndRoom.h"
 #include "InvalidCommand.h"
@@ -46,10 +45,6 @@ void GameState::StartGame()
 		if (nextRoomType == "Riddle")
 		{
 			_currentRoom = new RiddleRoom();
-		}
-		else if (nextRoomType == "Enemy")
-		{
-			_currentRoom = new EnemyRoom();
 		}
 		else if (nextRoomType == "Branch")
 		{

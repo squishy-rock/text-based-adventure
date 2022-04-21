@@ -5,5 +5,5 @@ A) Red small door
 Rooms/Riddle1.txt
 Riddle
 B) Green smaller door
-Rooms/Enemy1.txt
-Enemy
+Rooms/Riddle2.txt
+Riddle2

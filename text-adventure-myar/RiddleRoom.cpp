@@ -79,6 +79,10 @@ void RiddleRoom::ProcessCommand(string command)
 			cout << _incorrectMessage << "\n";
 		}
 	}
+	else if (_answeredCorrectly && command == "NEXT ROOM")
+	{
+		_proceedToNextRoom = true;
+	}
 	else
 	{
 		// throw exception here

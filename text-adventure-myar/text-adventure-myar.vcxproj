@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EndRoom.cpp" />
     <ClCompile Include="EnemyRoom.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="IntroRoom.cpp" />
@@ -148,6 +149,7 @@
     <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EndRoom.h" />
     <ClInclude Include="EnemyRoom.h" />
     <ClInclude Include="GameState.h" />
     <ClInclude Include="IntroRoom.h" />

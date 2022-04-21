@@ -13,7 +13,7 @@ void IntroRoom::ProcessCommand(string command)
 	}
 	else if (wordsInCommand[0] != "NEXT")
 	{
-		// throw exception "Only next command accepted"
+		// throw exception "Only next command accepted" (if the first word isnt next we know its wrong) 
 	}
 	else if (command == "NEXT ROOM")
 	{

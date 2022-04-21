@@ -1,0 +1,4 @@
+Enemy Room
+You walk in the room and you see a giant Cyclops ready to beat you up.
+EndRoom.txt
+Ending

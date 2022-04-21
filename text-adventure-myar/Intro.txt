@@ -1,0 +1,4 @@
+Welcome Reception
+Intro
+You enter the room with a big welcome sign greeting you to your riddle adventure, type 'Next Room' to start your adventure
+Riddle1.txt

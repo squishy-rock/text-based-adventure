@@ -5,6 +5,5 @@ class EndRoom :
 {
 public:
     void LoadRoom(string fileName);
-    void OutputRoomInfo();
 };
 

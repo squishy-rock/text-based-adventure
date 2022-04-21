@@ -1,4 +1,4 @@
 Welcome Reception
 You enter the room with a welcome sign greeting you to your riddle adventure, type 'NEXT ROOM' to start your adventure
-Riddle1.txt
-Riddle
+Rooms/Branch.txt
+Branch

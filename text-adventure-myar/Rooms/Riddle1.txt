@@ -1,6 +1,6 @@
 First Riddle Room
 You enter a mysterious room. There is a creepy man who looks strange. It feels like he wants to ask you something.
-Enemy1.txt
+Rooms/Enemy1.txt
 Enemy
 What has a head and a tail, but no body? Write ANSWER followed by the number to correctly answer the riddle.
 A) A letter.

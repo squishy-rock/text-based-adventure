@@ -1,5 +1,4 @@
 #include "Room.h"
-#include <string>
 #include <fstream> //open files and reads it
 #include <sstream>
 #include <iostream>

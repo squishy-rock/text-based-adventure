@@ -2,6 +2,7 @@
 #include "IntroRoom.h"
 #include "RiddleRoom.h"
 #include "EnemyRoom.h"
+#include "BranchRoom.h"
 #include "EndRoom.h"
 #include <iostream>
 
@@ -13,7 +14,7 @@ void GameState::StartGame()
 	bool gameRunning = true;
 	string command;
 	_currentRoom = new IntroRoom();
-	_currentRoom->LoadRoom("Intro.txt");
+	_currentRoom->LoadRoom("Rooms/Intro.txt");
 
 	while (true) // as long as its true it will run 
 	{
@@ -40,7 +41,7 @@ void GameState::StartGame()
 		string nextRoom = _currentRoom->_nextRoom;
 		string nextRoomType = _currentRoom->_nextRoomType;
 
-		// Possible rooms are "Riddle", "Enemy", "Ending"
+		// Possible rooms are "Riddle", "Enemy", "Branch", "Ending"
 		if (nextRoomType == "Riddle")
 		{
 			_currentRoom = new RiddleRoom();
@@ -48,6 +49,10 @@ void GameState::StartGame()
 		else if (nextRoomType == "Enemy")
 		{
 			_currentRoom = new EnemyRoom();
+		}
+		else if (nextRoomType == "Branch")
+		{
+			_currentRoom = new BranchRoom();
 		}
 		else if (nextRoomType == "Ending")
 		{

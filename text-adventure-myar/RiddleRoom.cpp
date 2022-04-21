@@ -17,17 +17,18 @@ RiddleRoom::RiddleRoom()
 
 void RiddleRoom::LoadRoom(string fileName)
 {
-	Room::LoadRoom(fileName); // load in the four base class variables in to the base class 
-
 	string line;
 	ifstream roomData(fileName);
 
 	// Read first four lines as empty, base class saves that data
 	getline(roomData, line);
+	_name = line;
 	getline(roomData, line);
+	_description = line;
 	getline(roomData, line);
+	_nextRoom = line;
 	getline(roomData, line);
-
+	_nextRoomType = line;
 	getline(roomData, line);
 	_question = line;
 	getline(roomData, line);
@@ -65,6 +66,7 @@ void RiddleRoom::ProcessCommand(string command)
 	if (wordsInCommand.size() > 2)
 	{
 		// throw exception here
+		// throw InvalidCommand("Your command has two many words");
 		cout << "COMMAND TOO BIG" << "\n";
 	}
 	else if (wordsInCommand[0] == "ANSWER")

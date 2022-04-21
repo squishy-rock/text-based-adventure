@@ -15,9 +15,3 @@ void EndRoom::LoadRoom(string fileName)
 
 	roomData.close();
 }
-
-void EndRoom::OutputRoomInfo()
-{
-	cout << _name << "\n";
-	cout << _description << "\n";
-}

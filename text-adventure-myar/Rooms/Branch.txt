@@ -1,0 +1,9 @@
+Branch Room
+You are presented with two doors. Which will you choose? Type ANSWER A or B.
+2
+A) Red small door
+Rooms/Riddle1.txt
+Riddle
+B) Green smaller door
+Rooms/Enemy1.txt
+Enemy

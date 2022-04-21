@@ -141,6 +141,8 @@
   <ItemGroup>
     <ClCompile Include="EnemyRoom.cpp" />
     <ClCompile Include="GameState.cpp" />
+    <ClCompile Include="IntroRoom.cpp" />
+    <ClCompile Include="InvalidCommand.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RiddleRoom.cpp" />
     <ClCompile Include="Room.cpp" />
@@ -148,6 +150,8 @@
   <ItemGroup>
     <ClInclude Include="EnemyRoom.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="IntroRoom.h" />
+    <ClInclude Include="InvalidCommand.h" />
     <ClInclude Include="RiddleRoom.h" />
     <ClInclude Include="Room.h" />
   </ItemGroup>

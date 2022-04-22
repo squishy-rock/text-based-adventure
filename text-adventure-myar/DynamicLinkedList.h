@@ -56,7 +56,7 @@ void DynamicLinkedList<T>::add(T value)
 
     if (first == nullptr)
     {
-        first - nodeToAdd;
+        first = nodeToAdd;
     }
     else
     {

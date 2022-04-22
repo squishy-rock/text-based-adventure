@@ -1,9 +1,10 @@
 Branch Room
 You are presented with two doors. Which will you choose? Type ANSWER A or B.
+Type ANSWER in caps lock then your selection.
 2
 A) Red small door
 Rooms/Riddle1.txt
 Riddle
 B) Green smaller door
 Rooms/Riddle2.txt
-Riddle2
+Riddle

@@ -26,6 +26,8 @@ void RiddleRoom::LoadRoom(string fileName)
 	getline(roomData, line);
 	_description = line;
 	getline(roomData, line);
+	_help = line;
+	getline(roomData, line);
 	_nextRoom = line;
 	getline(roomData, line);
 	_nextRoomType = line;
@@ -60,34 +62,41 @@ void RiddleRoom::OutputRoomInfo()
 	cout << _answer4 << "\n";
 }
 
-void RiddleRoom::ProcessCommand(string command)
+bool RiddleRoom::ProcessCommand(string command)
 {
-	vector<string> wordsInCommand = Room::SplitCommand(command);
-	if (wordsInCommand.size() > 2)
+	bool processedCommand = Room::ProcessCommand(command);
+	if (!processedCommand)
 	{
-		// throw exception here
-		// throw InvalidCommand("Your command has too many words");
-		throw InvalidCommand("COMMAND HAS TOO MANY WORDS.");
-	}
-	else if (wordsInCommand[0] == "ANSWER")
-	{
-		if (wordsInCommand[1] == _correctAnswer)
+		vector<string> wordsInCommand = Room::SplitCommand(command);
+		if (wordsInCommand.size() > 2)
 		{
-			cout << _correctMessage << "\n";
-			_answeredCorrectly = true;
+			// throw exception here
+			// throw InvalidCommand("Your command has too many words");
+			throw InvalidCommand("COMMAND HAS TOO MANY WORDS.");
+		}
+		else if (wordsInCommand[0] == "ANSWER")
+		{
+			if (wordsInCommand[1] == _correctAnswer)
+			{
+				cout << _correctMessage << "\n";
+				_answeredCorrectly = true;
+
+			}
+			else
+			{
+				cout << _incorrectMessage << "\n";
+			}
+			return true;
+		}
+		else if (_answeredCorrectly && command == "NEXT ROOM")
+		{
+			_proceedToNextRoom = true;
+			return true;
 		}
 		else
 		{
-			cout << _incorrectMessage << "\n";
+			// throw exception here
+			throw InvalidCommand("INVALID COMMAND PLEASE TYPE 'NEXT ROOM'.");
 		}
-	}
-	else if (_answeredCorrectly && command == "NEXT ROOM")
-	{
-		_proceedToNextRoom = true;
-	}
-	else
-	{
-		// throw exception here
-		throw InvalidCommand("INVALID COMMAND PLEASE TYPE 'NEXT ROOM'.");
 	}
 }

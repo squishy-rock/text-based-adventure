@@ -1,4 +1,5 @@
 Welcome Reception
-You enter the room with a welcome sign greeting you to your riddle adventure, type 'NEXT ROOM' to start your adventure
+You enter the room with a welcome sign greeting you to your riddle adventure, type 'NEXT ROOM' to start your adventure. Type HELP for help. 
+You need to use caps lock and type 'NEXT ROOM'. 
 Rooms/Branch.txt
 Branch

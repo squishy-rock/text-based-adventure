@@ -13,6 +13,6 @@ private:
 public:
     void LoadRoom(string fileName);
     void OutputRoomInfo();
-    void ProcessCommand(string command);
+    bool ProcessCommand(string command);
 };
 

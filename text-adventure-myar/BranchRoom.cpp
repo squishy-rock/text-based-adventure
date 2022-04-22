@@ -6,7 +6,7 @@
 
 void BranchRoom::LoadRoom(string fileName)
 {
-	_branches = DynamicLinkedList <BranchChoice>();
+
 	string line;
 	ifstream roomData(fileName);
 
@@ -14,6 +14,8 @@ void BranchRoom::LoadRoom(string fileName)
 	_name = line;
 	getline(roomData, line);
 	_description = line;
+	getline(roomData, line);
+	_help = line;
 	//reading each line and setting the variables
 
 	getline(roomData, line);
@@ -35,6 +37,7 @@ void BranchRoom::LoadRoom(string fileName)
 		choice._roomType = roomType;
 
 		_branches.add(choice);
+	
 	}
 
 	roomData.close();
@@ -50,41 +53,47 @@ void BranchRoom::OutputRoomInfo()
 	}
 }
 
-void BranchRoom::ProcessCommand(string command)
+bool BranchRoom::ProcessCommand(string command)
 {
-	vector<string> wordsInCommand = Room::SplitCommand(command);
-	if (wordsInCommand.size() > 2)
+	bool processedCommand = Room::ProcessCommand(command);
+	if (!processedCommand)
 	{
-		// throw exception here
-		// throw InvalidCommand("Your command has too many words");
-		throw InvalidCommand("ERROR YOUR COMMAND HAS TOO MANY WORDS.");
-	}
-	else if (wordsInCommand[0] == "ANSWER")
-	{
-		if (wordsInCommand[1].size() > 1)
+		vector<string> wordsInCommand = Room::SplitCommand(command);
+
+		if (wordsInCommand.size() > 2)
 		{
-			// throw choice too big error
+			// throw exception here
+			// throw InvalidCommand("Your command has too many words");
+			throw InvalidCommand("ERROR YOUR COMMAND HAS TOO MANY WORDS.");
+		}
+		else if (wordsInCommand[0] == "ANSWER")
+		{
+			if (wordsInCommand[1].size() > 1)
+			{
+				throw InvalidCommand("ERROR THE COMMAND ONLY ACCEPTS A - Z NOT MULTIPLE LETTERS.");
+			}
+			else
+			{
+				char choice = wordsInCommand[1][0];
+				int choiceIndex = choice - 'A';
+				if (choiceIndex >= _branches.size() || choiceIndex < 0)
+				{
+					// throw not valid choice error
+					throw InvalidCommand("INVALID COMMAND PLEASE TYPE ANSWER THEN YOUR CHOICE.");
+				}
+				else
+				{
+					_nextRoom = _branches.get(choiceIndex)._room;
+					_nextRoomType = _branches.get(choiceIndex)._roomType;
+					_proceedToNextRoom = true;
+					return true;
+				}
+			}
 		}
 		else
 		{
-			char choice = wordsInCommand[1][0];
-			int choiceIndex = choice - 'A';
-			if (choiceIndex >= _branches.size() || choiceIndex < 0)
-			{
-				// throw not valid choice error
-				throw InvalidCommand("INVALID COMMAND PLEASE TYPE ANSWER THEN YOUR CHOICE.");
-			}
-		else
-			{
-				_nextRoom = _branches.get(choiceIndex)._room;
-				_nextRoomType = _branches.get(choiceIndex)._roomType;
-				_proceedToNextRoom = true;
-			}
+			// throw exception here
+			throw InvalidCommand("ERROR PROCESSING COMMAND.");
 		}
-	}
-	else
-	{
-		// throw exception here
-		throw InvalidCommand("ERROR PROCESSING COMMAND.");
 	}
 }

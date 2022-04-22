@@ -6,6 +6,6 @@ class IntroRoom :
     public Room
 {
 public:
-    void ProcessCommand(string command);
+    bool ProcessCommand(string command);
 };
 

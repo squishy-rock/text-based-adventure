@@ -1,0 +1,12 @@
+Second Riddle Room
+You enter another room. You see a friendly looking dwarf. He has a riddle for you.
+Rooms/Enemy1.txt
+Riddle
+When I get multiplied by any number, the usm of the figures in the product is always me. What am I?
+A) 2
+B) 8
+C) 9
+D) 4
+C
+The creepy man say "Wrong answer!". You sweat a bit.
+The creepy man exclaims "CORRECT!". You sweat a bit. Type NEXT ROOM to proceed.

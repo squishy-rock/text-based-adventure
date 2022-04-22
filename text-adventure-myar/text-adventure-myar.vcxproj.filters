@@ -21,9 +21,6 @@
     <ClCompile Include="Room.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="EnemyRoom.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="RiddleRoom.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -47,9 +44,6 @@
     <ClInclude Include="Room.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EnemyRoom.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="RiddleRoom.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -66,6 +60,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="BranchRoom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DynamicLinkedList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BranchChoice.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

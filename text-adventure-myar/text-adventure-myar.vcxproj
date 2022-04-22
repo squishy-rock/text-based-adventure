@@ -141,7 +141,6 @@
   <ItemGroup>
     <ClCompile Include="BranchRoom.cpp" />
     <ClCompile Include="EndRoom.cpp" />
-    <ClCompile Include="EnemyRoom.cpp" />
     <ClCompile Include="GameState.cpp" />
     <ClCompile Include="IntroRoom.cpp" />
     <ClCompile Include="InvalidCommand.cpp" />
@@ -150,10 +149,11 @@
     <ClCompile Include="Room.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="DynamicLinkedList.h" />
     <ClInclude Include="BranchRoom.h" />
     <ClInclude Include="EndRoom.h" />
-    <ClInclude Include="EnemyRoom.h" />
     <ClInclude Include="GameState.h" />
+    <ClInclude Include="BranchChoice.h" />
     <ClInclude Include="IntroRoom.h" />
     <ClInclude Include="InvalidCommand.h" />
     <ClInclude Include="RiddleRoom.h" />

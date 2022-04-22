@@ -1,10 +1,12 @@
 #include "BranchRoom.h"
+#include "DynamicLinkedList.h"
 #include <fstream> //open files and reads it
 #include <sstream>
 #include <iostream>
 
 void BranchRoom::LoadRoom(string fileName)
 {
+	_branches = DynamicLinkedList <BranchChoice>();
 	string line;
 	ifstream roomData(fileName);
 
@@ -32,7 +34,7 @@ void BranchRoom::LoadRoom(string fileName)
 		choice._room = room;
 		choice._roomType = roomType;
 
-		_branches.push_back(choice);
+		_branches.add(choice);
 	}
 
 	roomData.close();
@@ -44,7 +46,7 @@ void BranchRoom::OutputRoomInfo()
 
 	for (int i = 0; i < _branches.size(); i++)
 	{
-		cout << _branches[i]._description << "\n"; // we only output the description cuz the others are hidden knowledge 
+		cout << _branches.get(i)._description << "\n"; // we only output the description cuz the others are hidden knowledge 
 	}
 }
 
@@ -72,10 +74,10 @@ void BranchRoom::ProcessCommand(string command)
 				// throw not valid choice error
 				throw InvalidCommand("INVALID COMMAND PLEASE TYPE ANSWER THEN YOUR CHOICE.");
 			}
-			else
+		else
 			{
-				_nextRoom = _branches[choiceIndex]._room;
-				_nextRoomType = _branches[choiceIndex]._roomType;
+				_nextRoom = _branches.get(choiceIndex)._room;
+				_nextRoomType = _branches.get(choiceIndex)._roomType;
 				_proceedToNextRoom = true;
 			}
 		}

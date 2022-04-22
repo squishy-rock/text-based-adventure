@@ -1,6 +1,7 @@
 #pragma once
-
+#include "BranchChoice.h"
 #include "Room.h"
+#include "DynamicLinkedList.h"
 
 class BranchRoom :
     public Room
@@ -8,7 +9,7 @@ class BranchRoom :
 private:
 
 
-    vector<BranchChoice> _branches; // list of all choices the uesr can make
+   DynamicLinkedList<BranchChoice> _branches; // list of all choices the uesr can make
 public:
     void LoadRoom(string fileName);
     void OutputRoomInfo();

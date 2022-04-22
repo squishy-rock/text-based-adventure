@@ -1,0 +1,13 @@
+Second Enemy Room 
+You walk in the room and you see a lich. 
+Type ANSWER in caps lock then your selection. Hint: When in doubt kill it with flames! Or type NEXT ROOM in caps lock only valid if you answered correctly. 
+Rooms/EndRoom.txt
+Ending
+Defeat the lich or end up in a ditch.  
+A) Ask him how his day is going
+B) Throw a rock at the candle lit chandelier to drop it on him.
+C) Swing your fists at him.
+D) Pray he just leaves
+B
+Lich screeches and dodges your antics. 
+The chandelier falls on the lich and sets him ablaze. You did not end up in a ditch. Type NEXT ROOM to proceed.

@@ -1,8 +1,8 @@
 Enemy Room
 You walk in the room and you see a giant Cyclops ready to beat you up.
 Type ANSWER in caps lock then your selection. Hint: He's much bigger than you! Or type NEXT ROOM in caps lock only valid if you answered correctly. 
-Rooms/EndRoom.txt
-Ending
+Rooms/Riddle3.txt
+Riddle
 Think fast, how will you defeat the Cyclops?! Type ANSWER then letter. 
 A) Dash in between his legs.
 B) Swing your fists at him.

@@ -1,0 +1,13 @@
+Third Riddle Room
+You enter another room. You see a shady looking cat. He speaks.....
+Type ANSWER in caps lock then your selection. Hint: Use a calculator. Type NEXT ROOM in caps lock if answered correctly.
+Rooms/Enemy2.txt
+Riddle
+I was 13 years old in 1870 and 8 years old in 1875. How is that possible?
+A) The dates are in AC
+B) 1875 was a leap year
+C) The dates are in BC
+D) 1870 began on the equinox
+C
+The cat hisses... That was not correct.
+The car purrs. Clever you meoware. Type NEXT ROOM to proceed.

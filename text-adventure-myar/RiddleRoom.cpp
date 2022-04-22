@@ -91,7 +91,7 @@ bool RiddleRoom::ProcessCommand(string command)
 		else if (_answeredCorrectly && command == "NEXT ROOM")
 		{
 			_proceedToNextRoom = true;
-			return true;
+			//return true;
 		}
 		else
 		{
